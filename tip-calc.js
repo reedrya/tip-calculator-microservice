@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+var cors = require('cors')
+app.use(cors())
+
 // Function to calculate tip
 function calculateTip(amount, tipPercentage) {
   const tipAmount = amount * (tipPercentage / 100);
